@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Project */
+    "incremental": true, // Enable incremental compilation. Requires TypeScript version 3.4 or later.
+
+    /* Language and Environment */
+    "target": "ES2023",
+    "lib": ["ES2023"],
+  
+
+    /* Modules */
+    "module": "commonjs",  
+    "moduleResolution": "node10",
+    "noUncheckedSideEffectImports": true,
+    "resolveJsonModule": true,
+    "rootDir": "./src", /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+  
+    /* Completeness */
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+
+    /* Emit */ 
+    "outDir": "./dist", /* Specify an output folder for all emitted files. */  
+    "noEmit": false,
+   
+    "types": ["node"],
+    "allowImportingTsExtensions": false, // Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set.
+   "allowSyntheticDefaultImports": true,
+   /* Interop Constraints */
+    "verbatimModuleSyntax": false, // Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's format based on the 'module' setting. See more: https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax
+    "erasableSyntaxOnly": true, 
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Linting */
+    "strict": true, /* Enable all strict type-checking options. */
+    "noUnusedLocals": true, /* Enable error reporting when local variables aren't read. */
+    "noUnusedParameters": true, /* Raise an error when a function parameter isn't read. */
+    "noFallthroughCasesInSwitch": true, /* Enable error reporting for fallthrough cases in switch statements. */
+   
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
